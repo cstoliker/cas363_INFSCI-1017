@@ -4,7 +4,8 @@ public class MusicTester {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Song song1 = new Song("Run", 80, "4/7/91", "4/1/91");
+		
 	}
 
 }

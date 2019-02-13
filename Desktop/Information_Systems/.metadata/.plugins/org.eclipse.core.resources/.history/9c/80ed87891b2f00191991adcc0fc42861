@@ -1,0 +1,124 @@
+package cas363_Music;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import  java.util.*;
+
+public class Song {
+	
+	//private variables--------------------------------------------------------------------------------------------=---------------------------//
+	private String songID, title, filePath, releaseDate, recordDate;
+	private int length;
+	private DbUtilities db;
+	
+	//constructors----------------------------------------------------------------------------------------------------------------------------//	
+	public Song(String title, int length, String releaseDate, String recordDate) {
+		db = new DbUtilities();
+		this.title = title;
+		this.length = length;
+		this.releaseDate = releaseDate;
+		this.recordDate = recordDate;
+		String sql = "INSERT INTO song (title, length, release_date, record_date)"
+				+ " VALUES ('"+ title + "', '" + length + "', '" + releaseDate + "', '" + recordDate + "');";
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+	
+	public Song(String songID) {
+		db = new DbUtilities();
+		this.songID = songID;
+		String sql = "SELECT title, length, release_date, record_date FROM song WHERE song_id = " + this.songID + ";";
+		try {
+			ResultSet rs = db.getResultSet(sql);
+			if (rs.next()) {
+				this.title = rs.getString(1);
+				this.length = rs.getInt(2)
+				this.releaseDate = rs.getString(3);
+				this.recordDate = rs.getString(4);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	//getters and setters for private variables-----------------------------------------------------------------------------------------------//
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		String sql = "UPDATE song SET title = '" + title + "' WHERE song_id =" + this.songID + ";";
+		this.title = title;
+		db.executeQuery(sql);
+	}
+
+	public String getFilePath() {
+		return filePath;
+	}
+
+	public void setFilePath(String filePath) {
+		String sql = "UPDATE song SET file_path = '" + filePath + "' WHERE song_id =" + this.songID + ";";
+		this.filePath = filePath;
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(String releaseDate) {
+		String sql = "UPDATE song SET release_date = '" + releaseDate + "' WHERE song_id =" + this.songID + ";";
+		this.releaseDate = releaseDate;
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+
+	public String getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(String recordDate) {
+		String sql = "UPDATE song SET record_date = '" + recordDate + "' WHERE song_id =" + this.songID + ";";
+		this.recordDate = recordDate;
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		String sql = "UPDATE song SET length = '" + length + "' WHERE song_id =" + this.songID + ";";
+		this.length = length;
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+
+	public String getSongID() {
+		return songID;
+	}
+
+	//Map------------------------------------------------------------------------------------------------------------------------------------//
+	public interface Map<String, Artist> {
+		
+	}
+	
+	//Methods-------------------------------------------------------------------------------------------------------------------------------//
+	public void deleteSong(String songID) {
+		
+	}
+	
+	public void addArtist(Artist artist) {
+		
+	}
+	
+	public void deleteArtist(String artistID) {
+		
+	}
+	
+	public void deleteArtist(Artist artist) {
+		
+	}
+}

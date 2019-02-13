@@ -1,0 +1,10 @@
+127.0.0.1 - - [12/Feb/2019:15:25:53 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:15:25:55 -0500] "GET /cas363_Music/WEB-INF/classes/cas363_Music/DatabaseConnect.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:15:44:08 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:15:44:08 -0500] "GET /connectionTester/WEB-INF/classes/connectionTester/DataBaseConnection.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:21:07:11 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:21:07:12 -0500] "GET /cas363_Music/WEB-INF/classes/cas363_Music/MusicTester.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:21:24:23 -0500] "GET /cas363_Music/WEB-INF/classes/cas363_Music/DbUtilities.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:21:28:43 -0500] "GET /cas363_Music/WEB-INF/classes/cas363_Music/DbUtilities.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:21:31:51 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:21:31:52 -0500] "GET /cas363_Music/WEB-INF/classes/cas363_Music/MusicTester.java HTTP/1.1" 404 1047

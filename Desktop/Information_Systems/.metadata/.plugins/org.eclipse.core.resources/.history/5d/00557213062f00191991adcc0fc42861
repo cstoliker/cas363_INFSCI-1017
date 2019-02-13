@@ -1,0 +1,18 @@
+import java.sql.*;
+import java.net.URL;
+package cas363_Music;
+
+public class DatabaseConnect {
+
+	public static void main(String[] args) {
+		// database connection credentials
+		String server = "sis-teach-01.sis.pitt.edu:3306";
+		String username = "infsci1017_2019";
+		String password = "infsci1017_2019!";
+		String dbName = "music2019";
+		
+		String connection = "jdbc:mysql://" + server + "/" + dbName + "?user=" + username + "&password=" + password;
+		Class.forName("com.mysql.jdbc.Driver").newInstance();
+	}
+
+}

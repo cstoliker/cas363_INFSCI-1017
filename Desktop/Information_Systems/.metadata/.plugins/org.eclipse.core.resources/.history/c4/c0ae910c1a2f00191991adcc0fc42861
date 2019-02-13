@@ -1,0 +1,108 @@
+package cas363_Music;
+
+public class Album {
+	
+	//private variables--------------------------------------------------------------------------------------------=---------------------------//
+	private String albumID, title, releaseDate, coverImagePath, recordingCompany, pmrcRating;
+	private int numberOfTracks, length;
+	private DbUtilities db;
+	
+	//constructors----------------------------------------------------------------------------------------------------------------------------//
+	public Album(String title, String releaseDate, String recordingCompany, int numberOfTracks) {
+		db = new DbUtilities();
+		this.title = title;
+		this.releaseDate = releaseDate;
+		this.recordingCompany = recordingCompany;
+		this.numberOfTracks = numberOfTracks;
+	}
+	
+	public Album(String albumID) {
+		db = new DbUtilities();
+		this.albumID = albumID;
+	}
+	//getters and setters for private variables-----------------------------------------------------------------------------------------------//
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		String sql = "UPDATE album SET title = '" + title + "' WHERE album_id =" + this.albumID + ";";
+		this.title = title;
+	}
+
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(String releaseDate) {
+		String sql = "UPDATE album SET release_date = '" + releaseDate + "' WHERE album_id =" + this.albumID + ";";
+		this.releaseDate = releaseDate;
+	}
+
+	public String getCoverImagePath() {
+		return coverImagePath;
+	}
+
+	public void setCoverImagePath(String coverImagePath) {
+		String sql = "UPDATE album SET cover_image_path = '" + coverImagePath + "' WHERE album_id =" + this.albumID + ";";
+		this.coverImagePath = coverImagePath;
+	}
+
+	public String getRecordingCompany() {
+		return recordingCompany;
+	}
+
+	public void setRecordingCompany(String recordingCompany) {
+		String sql = "UPDATE album SET recording_company = '" + recordingCompany + "' WHERE album_id =" + this.albumID + ";";
+		this.recordingCompany = recordingCompany;
+	}
+
+	public String getPmrcRating() {
+		return pmrcRating;
+	}
+
+	public void setPmrcRating(String pmrcRating) {
+		String sql = "UPDATE album SET pmrc_rating = '" + pmrcRating + "' WHERE album_id =" + this.albumID + ";";
+		this.pmrcRating = pmrcRating;
+	}
+
+	public int getNumberOfTracks() {
+		return numberOfTracks;
+	}
+
+	public void setNumberOfTracks(int numberOfTracks) {
+		String sql = "UPDATE album SET number_of_tracks = '" + numberOfTracks + "' WHERE album_id =" + this.albumID + ";";
+
+		this.numberOfTracks = numberOfTracks;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		String sql = "UPDATE album SET length = '" + length + "' WHERE album_id =" + this.albumID + ";";
+		this.length = length;
+	}
+
+	public String getAlbumID() {
+		return albumID;
+	}
+	
+	//Methods-------------------------------------------------------------------------------------------------------------------------------//
+	public void deleteAlbum(String songID) {
+		
+	}
+	
+	public void addSong(Song song) {
+		
+	}
+	
+	public void deleteSong(String songID) {
+		
+	}
+	
+	public void deleteSong(Song song) {
+		
+	}
+}

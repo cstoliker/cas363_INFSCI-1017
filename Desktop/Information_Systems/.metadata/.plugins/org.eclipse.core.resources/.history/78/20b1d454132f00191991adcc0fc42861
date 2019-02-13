@@ -1,0 +1,30 @@
+package cas363_Music;
+
+public class Song {
+	String songID, title, filePath, releaseDate, recordDate;
+	int length;
+	
+	public Song(String title, int length, String releaseDate, String recordDate) {
+		
+	}
+	
+	public Song(String songID) {
+		
+	}
+	
+	public void deleteSong(String songID) {
+		
+	}
+	
+	public void addArtist(Artist artist) {
+		
+	}
+	
+	public void deleteArtist(String artistID) {
+		
+	}
+	
+	public void deleteArtist(Artist artist) {
+		
+	}
+}

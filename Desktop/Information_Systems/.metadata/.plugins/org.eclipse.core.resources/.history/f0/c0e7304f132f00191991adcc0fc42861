@@ -1,0 +1,30 @@
+package cas363_Music;
+
+public class Album {
+	String albumID, title, releaseDate, coverImagePath, recordingCompany, pmrcRating;
+	int numberOfTracks, length;
+	
+	public Album(String title, String releaseDate, String recordingCompany, int numberOfTracks) {
+		
+	}
+	
+	public Album(String albumID) {
+		
+	}
+	
+	public void deleteAlbum(String songID) {
+		
+	}
+	
+	public void addSong(Song song) {
+		
+	}
+	
+	public void deleteSong(String songID) {
+		
+	}
+	
+	public void deleteSong(Song song) {
+		
+	}
+}

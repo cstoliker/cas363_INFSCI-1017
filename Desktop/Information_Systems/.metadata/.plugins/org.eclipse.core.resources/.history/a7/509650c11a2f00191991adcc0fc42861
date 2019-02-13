@@ -1,0 +1,68 @@
+package cas363_Music;
+
+public class Artist {
+	
+	//private variables--------------------------------------------------------------------------------------------=---------------------------//
+	private String artistID, firstName, lastName, bandName, bio;
+	private DbUtilities db;
+	
+	//constructors----------------------------------------------------------------------------------------------------------------------------//
+	public Artist(String firstName, String lastName, String bandName) {
+		db = new DbUtilities();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.bandName = bandName;
+	}
+	
+	public Artist(String artistID) {
+		db = new DbUtilities();
+		this.artistID = artistID;	
+	}
+	
+	//getters and setters for private variables-----------------------------------------------------------------------------------------------//
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		String sql = "UPDATE artist SET first_name = '" + firstName + "' WHERE artist_id =" + this.artistID + ";";
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		String sql = "UPDATE artist SET last_name = '" + lastName + "' WHERE artist_id =" + this.artistID + ";";
+		this.lastName = lastName;
+	}
+
+	public String getBandName() {
+		return bandName;
+	}
+
+	public void setBandName(String bandName) {
+		String sql = "UPDATE artist SET band_name = '" + bandName + "' WHERE artist_id =" + this.artistID + ";";
+
+		this.bandName = bandName;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		String sql = "UPDATE artist SET bio = '" + bio + "' WHERE artist_id =" + this.artistID + ";";
+		this.bio = bio;
+	}
+
+	public String getArtistID() {
+		return artistID;
+	}
+	
+	//Methods-------------------------------------------------------------------------------------------------------------------------------//
+	public void deleteArtist(String artistID) {
+		
+	}
+}

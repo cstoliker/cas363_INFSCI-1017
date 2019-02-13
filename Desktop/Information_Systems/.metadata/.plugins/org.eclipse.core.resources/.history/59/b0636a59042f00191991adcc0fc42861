@@ -1,0 +1,17 @@
+package cas363_Music;
+
+public class Artist {
+	String artistID, firstName, lastName, bandName, bio;
+	
+	public Artist(String firstName, String lastName, String, bandName) {
+		
+	}
+	
+	public Artist(String artistID) {
+		
+	}
+	
+	public void deleteArtist(String artistID) {
+		
+	}
+}
