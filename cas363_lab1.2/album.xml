@@ -1,0 +1,12 @@
+<schema xmlns=htt<?xml version="1.0" encoding="UTF-8">
+<albums>
+	<album>
+		<albumID>1</albumID>
+		<title>Greatest Hits</title>
+		<length>80</length>
+		<filePath>random/file/path/</filePath>
+		<releaseDate>12/7/1991</releaseDate>
+		<recordDate>8/8/1991</recordDate>
+		<songArtists>Bruce Springstein</songArtists>
+	</album>
+</albums>

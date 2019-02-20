@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8">
+<artists>
+	<artist>
+		<artistID>1</artistID>
+		<firstName>Bruce</firstName>
+		<lastName>Springstein</lastName>
+		<bandName>Winger</bandName>
+		<bio>From New York.</bio>
+	</artist>
+</artists>
